@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.HashMap;
+
+public class LongestSubstring {
+    public static void main(String args[]){
+        String s="abcabcbc";
+        HashMap<Character,Integer> hashmap= new HashMap<Character, Integer>();
+        int start=0,result=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(hashmap.containsKey(c))
+            {
+                start=Math.max(result,hashmap.get(c)+1);
+            }
+            result=Math.max(result,i-start+1);
+            hashmap.put(c,i);
+        }
+        System.out.println(result);
+    }
+}
