@@ -1,0 +1,24 @@
+import java.util.*;
+public class MyClass {
+   public static void main(String[] args)
+	{
+		String s = "aabc";
+		ArrayList<String> st = new ArrayList<String>();
+		for (int i = 0; i < s.length(); i++)
+		{
+
+			// Iterate from the end of the string
+			// to generate substrings
+			for (int j = s.length(); j > i; j--)
+			{
+				String sub_str = s.substring(i, j);
+
+			
+					st.add(sub_str);
+				
+		}
+		
+	}
+	System.out.println(st);
+	}
+}
