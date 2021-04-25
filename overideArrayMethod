@@ -1,0 +1,21 @@
+public class CustomArrayList<E> extends ArrayList<E>{
+
+    @Override
+    public boolean add(E e) {
+        String temp = (String)e;
+        if(temp==null || temp.isEmpty()){
+            return false;
+        }
+
+        return super.add(e);
+    }
+}
+with this class, following example will add only 1 element and print size as 1
+
+public static void main(String args[]) {
+        ArrayList<String> lst = new CustomArrayList<String>();
+        lst.add("aaaa");
+        lst.add(null);
+        lst.add("");
+        System.out.println(lst.size());
+    }
