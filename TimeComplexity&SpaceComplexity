@@ -1,0 +1,5 @@
+Time Complexity of algorithm
+
+Space complexity = Auxilary space+input size;
+
+If the input size is constant then the complexity is O(1).
