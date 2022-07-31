@@ -1,0 +1,23 @@
+class TwoArrays{
+    //Function to check if two arrays are equal or not.
+    public static boolean check(long A[],long B[],int N)
+    {
+        //Your code here
+        Arrays.sort(A);
+        Arrays.sort(B);
+        for (int i=0;i<N;i++)
+        {
+            if(A[i]!=B[i])
+            return false;
+        }
+        return true;
+    }
+    public static void main(String args[])
+    {
+    long A[]={5,7,8,9,0};
+    long B[]={8,7,9,0,5};
+    int n=A.length();
+    check(A,B,n);
+    }
+    
+}
